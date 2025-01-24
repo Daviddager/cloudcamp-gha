@@ -1,6 +1,15 @@
 name: First workflow
 on:
   push:
+    branches:
+      - main
+    paths:
+      - '**.tf'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.tf'
 
 env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -23,4 +32,9 @@ jobs:
 
       - name: Terraform plan
         run: |
-          terraform plan
+          terraform plan -out=tfplan
+
+      - name: Terrafom apply
+        if: ${{ github.ref == 'main' }}
+        run: |
+          terraform apply "tfplan"
