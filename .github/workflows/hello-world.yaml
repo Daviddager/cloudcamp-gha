@@ -1,6 +1,8 @@
 name: First workflow
 on:
   push:
+    paths:
+      - '**.tf'
 
 env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
