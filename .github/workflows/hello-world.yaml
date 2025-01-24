@@ -12,14 +12,14 @@ jobs:
   
       - name: Check terraform
         run: |
-          which terraform
+          whereis terraform
 
       - name: Install terraform
         uses: hashicorp/setup-terraform@v3.1.2
 
       - name: Check terraform again
         run: |
-          which terraform
+          whereis terraform
 
       - name: Print Hello World
         run: |
