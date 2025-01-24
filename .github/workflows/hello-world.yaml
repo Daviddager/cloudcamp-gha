@@ -23,4 +23,9 @@ jobs:
 
       - name: Terraform plan
         run: |
-          terraform plan
+          terraform plan -out=tfplan
+
+      - name: Terrafom apply
+        if: ${{ github.ref == "main" }}
+        run: |
+          terraform apply "tfplan"
