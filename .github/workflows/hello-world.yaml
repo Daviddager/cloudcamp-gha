@@ -25,7 +25,7 @@ jobs:
 
       - name: Terraform plan
         env:
-          AWS_SECRET_ACESS_KEY: VALUE3
+          AWS_SECRET_ACCESS_KEY: VALUE3
         run: |
           echo "terraform plan"
 
@@ -33,7 +33,7 @@ jobs:
             echo $AWS_SECRET_ACCESS_KEY
 
   test:
-    runs-on: macos
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
