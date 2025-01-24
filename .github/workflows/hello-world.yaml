@@ -1,4 +1,4 @@
-# name: 
+name: First workflow
 on:
   push:
 
@@ -7,7 +7,9 @@ jobs:
     name: Hello World
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
 
-      - run: |
+      - name: Print Hello World
+        run: |
           echo "Hello World!"
