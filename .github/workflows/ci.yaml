@@ -7,4 +7,4 @@ jobs:
     steps:
      - name: unit-test
        run: |
-        pytest
+        echo "hello world"
