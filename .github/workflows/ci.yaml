@@ -1,0 +1,10 @@
+on:
+  push:
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+     - name: unit-test
+       run: |
+        pytest
