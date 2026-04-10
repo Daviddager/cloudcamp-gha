@@ -39,7 +39,7 @@ jobs:
         with:
           # This will add both a CLI output to the console and create a results.sarif file
           output_format: cli,sarif
-          output_file_path: console,results.sarif
+          arg: --output-file-path=console,results.sarif
         
       - name: Upload SARIF file
         # using v4.35.1
