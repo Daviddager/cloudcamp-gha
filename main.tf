@@ -32,7 +32,6 @@ resource "aws_s3_bucket" "example" {
       sse_algorithm     = "AES256"
     }
   }
-}
 
   tags = {
     Name        = "My bucket"

@@ -39,7 +39,9 @@ jobs:
         with:
           # This will add both a CLI output to the console and create a results.sarif file
           skip_check: CKV_AWS_144,CKV_AWS_18,CKV2_AWS_6
-          output_format: cli
+          output_format: sarif
+
+      - run: ls -oh
         
       - name: Upload SARIF file
         # using v4.35.1
